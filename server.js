@@ -13,22 +13,24 @@ mongoose.connect(process.env.MONGO_URI)
   .catch(err => console.error('❌ DB connection error:', err));
 
 // Import routes
-const profileRoutes = require('./routes/profile');
-const summaryRoutes = require('./routes/summary');
-const skillsRoutes = require('./routes/skills');
-const educationRoutes = require('./routes/education');
-const awardsRoutes = require('./routes/awards');
-const experiencesRoutes = require('./routes/experiences');
-const projectsRoutes = require('./routes/projects');
+// const profileRoutes = require('./routes/profile');
+// const summaryRoutes = require('./routes/summary');
+// const skillsRoutes = require('./routes/skills');
+// const educationRoutes = require('./routes/education');
+// const awardsRoutes = require('./routes/awards');
+// const experiencesRoutes = require('./routes/experiences');
+// const projectsRoutes = require('./routes/projects');
+const resumeRoutes = require('./routes/resume');
 
-// Use routes
-app.use('/api/profile', profileRoutes);
-app.use('/api/summary', summaryRoutes);
-app.use('/api/skills', skillsRoutes);
-app.use('/api/education', educationRoutes);
-app.use('/api/awards', awardsRoutes);
-app.use('/api/experiences', experiencesRoutes);
-app.use('/api/projects', projectsRoutes);
+
+// app.use('/api/profile', profileRoutes);
+// app.use('/api/summary', summaryRoutes);
+// app.use('/api/skills', skillsRoutes);
+// app.use('/api/education', educationRoutes);
+// app.use('/api/awards', awardsRoutes);
+// app.use('/api/experiences', experiencesRoutes);
+// app.use('/api/projects', projectsRoutes);
+app.use('/api/resume', resumeRoutes);
 
 // Start server
 const PORT = process.env.PORT || 5000;

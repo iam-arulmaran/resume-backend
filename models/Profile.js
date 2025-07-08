@@ -12,6 +12,7 @@ const profileSchema = new mongoose.Schema({
   phone: String,
   location: String,
   linkedIn: linkedInSchema,
+  jobDesignation: String,
 });
 
 module.exports = mongoose.model('Profile', profileSchema);
